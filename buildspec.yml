@@ -3,13 +3,13 @@ phases:
   pre_build:
     commands:
       - echo Restore started on `date`
-      - dotnet restore src/ApplicationCore/ApplicationCore.csproj
+      - dotnet restore src/Infrastructure/Infrastructure.csproj
 
   build:
     commands:
       - echo Build started on `date`
-      - dotnet publish -c release -o ./build_output src/BlazorShared/BlazorShared.csproj
-      - dotnet publish -c release -o ./build_output src/ApplicationCore/ApplicationCore.csproj
+      - dotnet publish -c release -o ./build_output src/Infrastructure/Infrastructure.csproj
+      - dotnet publish -c release -o ./build_output src/Infrastructure/Infrastructure.csproj
 artifacts:
   files:
     - CodeBuild-SampleCore/build_output/**/*
