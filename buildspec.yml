@@ -9,6 +9,7 @@ phases:
     commands:
       - echo Build started on `date`
       - dotnet publish -c release -o ./build_output src/BlazorShared/BlazorShared.csproj
+      - dotnet publish -c release -o ./build_output src/ApplicationCore/ApplicationCore.csproj
 artifacts:
   files:
     - CodeBuild-SampleCore/build_output/**/*
