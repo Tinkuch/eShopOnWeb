@@ -3,11 +3,12 @@ phases:
   pre_build:
     commands:
       - echo Restore started on `date`
-      - dotnet restore eShopOnWeb.sln
+      - dotnet src/ApplicationCore/ApplicationCore.csproj
+
   build:
     commands:
       - echo Build started on `date`
-      - dotnet publish -c release -o ./build_output eShopOnWeb.sln
+      - dotnet publish -c release -o ./build_output src/ApplicationCore/ApplicationCore.csproj
 artifacts:
   files:
     - CodeBuild-SampleCore/build_output/**/*
