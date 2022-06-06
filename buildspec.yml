@@ -3,7 +3,7 @@ phases:
   pre_build:
     commands:
       - echo Restore started on `date`
-      - dotnet src/ApplicationCore/ApplicationCore.csproj
+      - dotnet restore src/ApplicationCore/ApplicationCore.csproj
 
   build:
     commands:
